@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt- br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+function nextLine(){
+            document.write("<br><br>");
+        }
+
+        function showNextLine(phrase){
+            document.write(phrase);
+            nextLine();
+
+        }
+
+        function sorteia(n){
+            return Math.round(Math.random() * n);
+        }
+        var numeroPensado = sorteia(10);
+
+
+        var tentativas = 1;
+
+        while(tentativas <=3){
+
+        var chute = parseInt(prompt("Digite o seu chute"));
+
+        if(chute == numeroPensado){
+            showNextLine("Você acertou! O número pensado foi: " + numeroPensado);
+            break;
+        }
+        else{
+            showNextLine("Você errou!");
+        }
+         tentativas++;
+        }
+        
+        
+</script>
+    
+</body>
+</html>

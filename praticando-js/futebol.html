@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function nextLine(){
+            document.write("<br><br>");
+        }
+
+        function showNextLine(phrase){
+            document.write(phrase);
+            nextLine();
+
+        }
+
+        var vitorias = parseInt(prompt("Entre com o número de vitórias:"));
+        alert(vitorias *3);
+        var empates = parseInt(prompt("Entre com o número de empates:"));
+
+        var pontos = vitorias * 3 + empates;
+
+      
+
+        if(pontos == 28){
+            showNextLine("O seu time está igual ao ano passado");
+            
+
+        }
+        if(pontos < 28){
+            showNextLine("O seu time está pior que no ano passado");
+            
+        }
+
+        if(pontos > 28){
+            showNextLine("o seu time está meelhor que no ano passado");
+            
+
+        }
+        showNextLine("Com um total de pontos de: " + pontos);
+        
+
+    
+    </script>
+    
+</body>
+</html>
